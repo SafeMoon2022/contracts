@@ -1,8 +1,13 @@
+/**
+*
+*  Official website:  https://safemoon2022.org
+*
+*/
+
+
 // SPDX-License-Identifier: MIT
 
-
 pragma solidity ^0.6.12;
-
 
 interface IERC20 {
 
@@ -36,7 +41,7 @@ interface IERC20 {
      *
      * Returns a boolean value indicating whether the operation succeeded.
      *
-     * IMPORTANT: Beware that changing an allowance with this method brings the riskh
+     * IMPORTANT: Beware that changing an allowance with this method brings the risk
      * that someone may use both the old and the new allowance by unfortunate
      * transaction ordering. One possible solution to mitigate this race
      * condition is to first reduce the spender's allowance to 0 and set the
@@ -682,7 +687,7 @@ interface IUniswapV2Router02 is IUniswapV2Router01 {
 }
 
 
-contract SafeMoon_2022 is Context, IERC20, Ownable {
+contract SafeMoon2022 is Context, IERC20, Ownable {
     using SafeMath for uint256;
     using Address for address;
 
@@ -700,7 +705,7 @@ contract SafeMoon_2022 is Context, IERC20, Ownable {
     uint256 private _rTotal = (MAX - (MAX % _tTotal));
     uint256 private _tFeeTotal;
 
-    string private constant _name = "SafeMoon 22";
+    string private constant _name = "SafeMoon 2022";
     string private constant _symbol = "SF22";
     uint8 private constant _decimals = 9;
     
@@ -736,7 +741,7 @@ contract SafeMoon_2022 is Context, IERC20, Ownable {
     constructor () public {
         _rOwned[_msgSender()] = _rTotal;
         
-        IUniswapV2Router02 _uniswapV2Router = IUniswapV2Router02(0x9Ac64Cc6e4415144C455BD8E4837Fea55603e5c3);
+        IUniswapV2Router02 _uniswapV2Router = IUniswapV2Router02(0x10ED43C718714eb63d5aA57B78B54704E256024E);
          // Create a uniswap pair for this new token
         uniswapV2Pair = IUniswapV2Factory(_uniswapV2Router.factory())
             .createPair(address(this), _uniswapV2Router.WETH());
@@ -1154,9 +1159,4 @@ contract SafeMoon_2022 is Context, IERC20, Ownable {
         _reflectFee(rFee, tFee);
         emit Transfer(sender, recipient, tTransferAmount);
     }
-
-    function kill() public onlyOwner {
-         selfdestruct(msg.sender);
-    }
-
 }
