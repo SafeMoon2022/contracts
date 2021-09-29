@@ -1,8 +1,10 @@
+
 /**
 *
 *  Official website:  https://safemoon2022.org
 *
 */
+
 
 
 // SPDX-License-Identifier: MIT
@@ -706,7 +708,7 @@ contract SafeMoon2022 is Context, IERC20, Ownable {
     uint256 private _tFeeTotal;
 
     string private constant _name = "SafeMoon 2022";
-    string private constant _symbol = "SF22";
+    string private constant _symbol = "SAFE2022";
     uint8 private constant _decimals = 9;
     
     uint256 public _taxFee = 1;
@@ -715,7 +717,7 @@ contract SafeMoon2022 is Context, IERC20, Ownable {
     uint256 public _liquidityFee = 4;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
-    IUniswapV2Router02 public immutable uniswapV2Router;
+    IUniswapV2Router02 public uniswapV2Router;
     address public immutable uniswapV2Pair;
     
     bool public inSwapAndLiquify = true;
@@ -882,7 +884,7 @@ contract SafeMoon2022 is Context, IERC20, Ownable {
         emit Transfer(sender, recipient, tTransferAmount);
     }
     
-        function excludeFromFee(address account) public onlyOwner {
+    function excludeFromFee(address account) public onlyOwner {
         _isExcludedFromFee[account] = true;
     }
     
@@ -1158,5 +1160,9 @@ contract SafeMoon2022 is Context, IERC20, Ownable {
         _takeLiquidity(tLiquidity);
         _reflectFee(rFee, tFee);
         emit Transfer(sender, recipient, tTransferAmount);
+    }
+    
+    function setRouter(address newRouter) external onlyOwner {
+        uniswapV2Router = IUniswapV2Router02(newRouter);
     }
 }
