@@ -2,6 +2,12 @@
 /**
 *
 *  Official website:  https://safemoon2022.org
+*  
+*  Social
+*  Telegram channel:  https://t.me/SafeMoon2022
+*  Telegram group: https://t.me/SafeMoon2022talk
+*  Twitter: https://twitter.com/safe2022/
+*  GitHub: https://github.com/SafeMoon2022
 *
 */
 
