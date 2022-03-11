@@ -21,6 +21,11 @@ What changes in the contract: https://www.diffchecker.com/jiL0ny6q
 You can compare the old and the new contract yourself, and make sure that all the changes made are really safe.
 
 # Social
-Telegram channel:  https://t.me/SafeMoon2022
-Telegram group: https://t.me/SafeMoon2022talk
-Twitter: https://twitter.com/safe2022
+# Telegram channel
+https://t.me/SafeMoon2022
+
+# Telegram group 
+https://t.me/SafeMoon2022talk
+
+# Twitter 
+https://twitter.com/safe2022
