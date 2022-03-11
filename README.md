@@ -2,7 +2,7 @@
 https://pancakeswap.finance/swap?outputCurrency=0x5A47be1669BC9ecf441d10F41dA312a396873371
 
 # Live chart1
-https://dex.guru/token/0x5A47be1669BC9ecf441d10F41dA312a396873371-bsc
+https://poocoin.app/tokens/0x5a47be1669bc9ecf441d10f41da312a396873371
 
 # Live chart2
 https://dex.guru/token/0x5a47be1669bc9ecf441d10f41da312a396873371-bsc
